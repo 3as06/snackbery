@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${product.name}"></title>
+</head>
+<body>
+<h1 th:text="${product.name}"></h1>
+<img th:src="${product.imageUrl}" alt="Image"/>
+<p th:text="${product.description}"></p>
+<p>Цена: <span th:text="${product.price}"></span> руб.</p>
+<a th:href="@{/}">Вернуться к каталогу</a>
+</body>
+</html>

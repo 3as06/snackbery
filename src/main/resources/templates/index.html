@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Snackbery</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<h1>Каталог продуктов</h1>
+<div>
+    <div th:each="product : ${products}">
+        <a th:href="@{|/product/${product.id}|}">
+            <img th:src="${product.imageUrl}" alt="Image"/>
+            <p th:text="${product.name}"></p>
+        </a>
+    </div>
+</div>
+</body>
+</html>
